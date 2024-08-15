@@ -115,20 +115,7 @@ const Home = () => {
           </select>
         )}
 
-        {/* {sortBy === "creationDate" && (
-          <select
-            onChange={(e) => setSortOrder(e.target.value)}
-            className="border p-2 rounded mb-2"
-          >
-            <option value="desc">Newest First</option>
-            <option value="dsc">Oldest First</option>
-          </select>
-        )} */}
-
-        {/* <select onChange={(e) => setSortOrder(e.target.value)} className="border p-2 rounded mb-2">
-                    <option value="asc">Low to High</option>
-                    <option value="desc">High to Low</option>
-                </select> */}
+      
       </div>
 
       {/* Product Cards */}
