@@ -50,16 +50,18 @@ const Home = () => {
       <h1 className="text-center  text-lg font-semibold mb-6">
         Here all our products are displayed!
       </h1>
-
-      {/* Search and Filters */}
-      <div className="mb-4">
-        <input
+      <div className="flex justify-center items-center">
+      <input
           type="text"
           placeholder="Search by product name..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="border p-2 rounded mb-2 mr-2"
         />
+      </div>
+      {/* Search and Filters */}
+      <div className="mb-4 flex justify-center items-center">
+       
         <select
           onChange={(e) => setBrand(e.target.value)}
           className="border p-2 rounded mb-2 mr-2"
