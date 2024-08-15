@@ -2,17 +2,17 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import defaultImage from '../../assets/images/default_user.png'
-
+import image from '../../assets/images/cosmetics.png'
 const NavBer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user , logout } = useAuth()
 
   return (
-    <nav className="bg-red-600/60 p-4">
+    <nav className="bg-[#4f4789] p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <img src="/best-outfit.png" alt="Logo" className="w-16 mr-2" />
-          {/* <span className="text-white text-lg font-semibold">Best Outfit</span> */}
+          <img src={image} alt="Logo" className="w-10 mr-2" />
+          <span className="text-white text-xl font-bold">Glymr-Shop</span>
         </div>
         <div className="hidden md:flex items-center space-x-4">
           <Link to="/" className="text-white hover:text-gray-300">Home</Link>

@@ -32,10 +32,10 @@ const SocialLogin = () => {
         <div className="my-2">
             <button
                 onClick={handleGoogleSignIn}
-                className="p-2 flex items-center gap-2 border-2 bg-green-600 rounded-2xl"
+                className="p-2 w-full text-white flex items-center justify-center gap-2 border-2 bg-blue-600 rounded-2xl"
                 aria-label="Sign in with Google"
             >
-                <FaGoogle></FaGoogle>Google
+                <FaGoogle className="text-white"></FaGoogle>Google
             </button>
         </div>
     );
