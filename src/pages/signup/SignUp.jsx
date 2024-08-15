@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import useAuth from "../../hooks/useAuth";
+import SocialLogin from "../../components/SocialLogin";
 
 const SignUp = () => {
     const axiosPublic = useAxiosPublic()
@@ -29,20 +30,16 @@ const SignUp = () => {
                 userUpdateProfile(name, photo)
                     .then(() => {
                         console.log("photo update");
-                        // const userInfo = {
-                        //     name: name,
-                        //     email: email,
-                        // }
-                        // axiosPublic.post('/users', userInfo)
-                        //     .then(res => {
-                        //         if (res.data.insertedId) {
-                        //             Swal.fire({
-                        //                 title: "Good job!",
-                        //                 text: "login successfully!",
-                        //                 icon: "success"
-                        //             });
-                        //         }
-                        //     })
+                        const userInfo = {
+                            name: name,
+                            email: email,
+                        }
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                           console.log('int');
+                                }
+                            })
                     })
                     .catch(error => console.error(error))
                 navigate('/')
@@ -101,6 +98,8 @@ const SignUp = () => {
                             <input className="btn btn-primary" type="submit" value="SignUp" />
                         </div>
                     </form>
+                    <hr />
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
         </div>
