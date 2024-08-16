@@ -1,3 +1,5 @@
+import { Rating } from "@smastrom/react-rating";
+
 const ShopCard = ({product}) => {
   console.log(product.productImage)
   return (
@@ -26,6 +28,11 @@ const ShopCard = ({product}) => {
       </div>
       <div className="flex items-center justify-between px-4 py-2 bg-gray-900">
         <h1 className="text-lg font-bold text-white">${product.price}</h1>
+        <Rating
+                style={{ maxWidth: 180 }}
+                value={product.ratings}
+                readOnly
+              />
       </div>
     </div>
   );
