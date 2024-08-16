@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import useAuth from "../../hooks/useAuth";
 import SocialLogin from "../../components/SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
     const axiosPublic = useAxiosPublic();
@@ -49,6 +50,9 @@ const SignUp = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                <title>Best Outfit | Sign Up</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="card shrink-0 w-[400px] shadow-2xl bg-base-100 lg:px-4">
                     <form onSubmit={handleSubmit(handleSignUp)} className="card-body">

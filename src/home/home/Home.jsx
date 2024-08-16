@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import ShopCard from '../../components/ShopCard'
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
@@ -44,6 +45,9 @@ const Home = () => {
 
   return (
     <div className="p-4">
+      <Helmet>
+                <title>Best Outfit | Home</title>
+            </Helmet>
       <h1 className="text-center  text-2xl font-semibold mt-6">
         Welcome to Glymr-Shop...
       </h1>

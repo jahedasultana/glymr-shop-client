@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import SocialLogin from "../../components/SocialLogin";
+import { Helmet } from "react-helmet-async";
 
 
 const SignIn = () => {
@@ -30,6 +31,9 @@ const SignIn = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                <title>Best Outfit | Sign In</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row">
                 <div className="card w-full md:w-[400px] shadow-2xl bg-base-100">
                     <form onSubmit={handleLogin} className="card-body">
