@@ -48,14 +48,14 @@ const Home = () => {
         <title>Best Outfit | Home</title>
       </Helmet>
       <div>
-      <hr className="text-white mt-6 font-bold w-[400px] mx-auto mb-6"/>
+      <hr className="text-white mt-6 font-bold w-[300px] md:w-[400px] mx-auto mb-6"/>
       <h1 className="text-center md:text-3xl font-semibold mt-6">
         Welcome to Glymr-Shop
       </h1>
       <h1 className="text-center text-lg font-semibold mb-6">
         Here all our products are displayed!
       </h1>
-      <hr className="text-white font-bold w-[400px] mx-auto mb-6"/>
+      <hr className="text-white font-bold w-[300px] md:w-[400px] mx-auto mb-6"/>
       </div>
     
 
