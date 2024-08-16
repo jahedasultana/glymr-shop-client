@@ -1,9 +1,10 @@
 const ShopCard = ({product}) => {
+  console.log(product.productImage)
   return (
     <div className="max-w-xs bg-white rounded-lg shadow-lg dark:bg-gray-800 flex flex-col justify-between" style={{ height: '450px' }}>
       <img
         className="object-cover w-full h-48 mt-2 p-3 rounded-lg"
-        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80"
+        src={product.productImage}
         alt="image"
       />
       <div className="px-4 py-2 flex-grow">
