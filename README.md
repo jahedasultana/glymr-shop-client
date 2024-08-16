@@ -4,6 +4,7 @@
 
 This is the frontend part of the Fullstack Product Search and Filtering Website. It is built using React.js and provides users with a single-page interface to search, filter, and sort products. It integrates with the backend server to fetch and manage product data.
 
+
 ## Features
 
 - **Pagination:** Efficiently load and display products with page navigation.
