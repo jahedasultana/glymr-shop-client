@@ -1,6 +1,14 @@
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 const ShopCard = ({product}) => {
+
+
+  const date = product.creationDate.split('T')[0];
+  // eslint-disable-next-line react/prop-types
+  const timeFix = product.creationDate.split('T')[1];
+  const time = timeFix.split('Z')[0]
+
+
   console.log(product.productImage)
   return (
     <div className="max-w-xs bg-white rounded-lg shadow-2xl border-t-2 border-gray-400 dark:bg-gray-800 flex flex-col justify-between" style={{ height: '450px' }}>
@@ -20,7 +28,7 @@ const ShopCard = ({product}) => {
         </div>
         <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
             <span>Date and Time:</span>
-            <span>{product.dateAndTime}</span>
+            <span>{date} / {time}</span>
           </p>
         <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
           <span className="font-bold">Description: </span>

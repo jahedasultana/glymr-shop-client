@@ -60,7 +60,7 @@ const Home = () => {
     
 
       {/* Search and Filters */}
-      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center items-center mb-4">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center mb-4">
         <input
           type="text"
           placeholder="Search by product name..."
@@ -102,14 +102,7 @@ const Home = () => {
           onChange={(e) => setMaxPrice(e.target.value)}
           className="border p-2 rounded mb-2 sm:mb-0 sm:mr-2 w-full sm:w-auto"
         />
-        <select
-          onChange={(e) => setSortBy(e.target.value)}
-          className="border p-2 rounded mb-2 sm:mb-0 sm:mr-2 w-full sm:w-auto"
-        >
-          <option value="">Sort By</option>
-          <option value="price">Price</option>
-          <option value="creationDate">Newest First</option>
-        </select>
+        
         <select
           onChange={(e) => {
             const value = e.target.value;
@@ -124,7 +117,7 @@ const Home = () => {
               setSortOrder("desc");
             }
           }}
-          className="border mt-2 p-2 rounded w-full sm:w-auto"
+          className="border p-2 rounded w-full sm:w-auto"
         >
           <option value="">Sort By</option>
           <option value="price-asc">Price (Low to High)</option>
